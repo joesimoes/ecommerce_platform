@@ -10,9 +10,9 @@
 #
 Customer.create(email: "test123@gmail.com", name: "Jonathan Dough", phone_number: "1231231234")
 Product.create(name: "Office Chair", description: "Lorem Ipsum...", price_cents: 15000)
-Product.create(name: "Stapler", description: "I believe you have my stapler...", price_cents: 15000)
+Product.create(name: "Stapler", description: "I believe you have my stapler...", price_cents: 500)
 Warehouse.create(address: "500 Smith Ave, Richmond, VA 55555")
 Warehouse.create(address: "123 Atlantic Avenue, New York, NY 10010")
-WarehouseProduct.create(warehouse_id: Warehouse.first.id, product_id: Product.first.id, quantity: 50)
-WarehouseProduct.create(warehouse_id: Warehouse.first.id, product_id: Product.last.id, quantity: 50)
-WarehouseProduct.create(warehouse_id: Warehouse.last.id, product_id: Product.last.id, quantity: 50)
+WarehouseProduct.create(warehouse_id: Warehouse.first.id, product_id: Product.first.id, quantity: 5)
+WarehouseProduct.create(warehouse_id: Warehouse.first.id, product_id: Product.last.id, quantity: 5)
+WarehouseProduct.create(warehouse_id: Warehouse.last.id, product_id: Product.last.id, quantity: 5)

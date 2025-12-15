@@ -21,7 +21,11 @@ class Warehouse < ApplicationRecord
   end
 
   def distance_to(address)
-      # real implementation would find closest warehouse based on lat/long of address compared to shipping address of order
-    rand(1..10)
+      # fake coordinates, find closest warehouse based on lat/long of address compared to shipping address of order
+    latitude = rand(-90.0..90.0)
+    longitude = rand(-180.0..180.0)
+
+    lat, lon = FakeGeocoder.coordinates_for(address)
+    (latitude - lat).abs + (longitude - lon).abs
   end
 end

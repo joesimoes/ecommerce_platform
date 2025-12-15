@@ -28,7 +28,7 @@ class Order < ApplicationRecord
   end
 
   def place!(warehouse:)
-    raise ArgumentError, "Warehouse is required to place an order" if warehouse.nil?
+    raise ArgumentError, "Unable to find a warehouse to fulfill that order" if warehouse.nil?
 
     transaction do
       self.warehouse = warehouse

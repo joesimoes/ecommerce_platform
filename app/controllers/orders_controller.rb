@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
       @order.order_products.build(
         product_id: product[:product_id],
         quantity: product[:quantity] || 1,
-        price_cents: product[:price_cents]
+        price_cents: Product.find(product[:product_id]).price_cents
       )
     end
 
